@@ -21,7 +21,7 @@ app.get('/', (req, res)=> {
 //we can do html also::
 //localhost:3000/html in browser after running in terminal.
 app.get('/html', (req, res)=> {
-    res.send("<h1>This is heading</h1>")
+    res.send("<h1>This is heading.</h1>")
 })
 
 // There are likely 1-65555 ports.
