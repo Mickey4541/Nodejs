@@ -50,3 +50,10 @@ app.listen(3000,() => {
     console.log("NodeJs project has started on port 3000");
     
 })
+
+
+//day4>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+app.get('/day4', (req, res)=> {
+    res.render("day4", {name:"Rajan", lastname:"Bhandari"})
+})
