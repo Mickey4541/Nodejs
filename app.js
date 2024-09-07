@@ -10,24 +10,35 @@ app.set("view engine", "ejs")
 // })
 
 
-app.get('/about', (req, res)=> {
-    res.send("This is a About Page");
-})
 
 //in terminal first run node app.js and in browser localhost:3000/ and enter
 app.get('/', (req, res)=> {
-    res.send("This is homepage.")
+    res.render("home.ejs")//to render file named home.ejs inside views.
+
+
+app.get('/about', (req, res)=> {
+    res.render("about.ejs");
+})
+
+
+app.get('/contact', (req, res)=> {
+    res.render("contact")//.ejs na lekhdaa ni hunxa.
+})
+
+app.get('/service', (req, res)=> {
+    res.render("service")//.ejs na lekhdaa ni hunxa.
+})
+
+
+
 })
 app.get('/request', (req, res)=> {
     console.log(req)
 })
 
 
-//we can do html also::
-//localhost:3000/html in browser after running in terminal.
-app.get('/html', (req, res)=> {
-    res.send("<h1>This is heading.</h1>")
-})
+
+
 
 // There are likely 1-65555 ports.
 // 443 = HTTPS
