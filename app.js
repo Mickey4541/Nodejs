@@ -2,6 +2,8 @@ const express = require("express")//requiring express package
 const app = express()//storing it in app, app vanney variable throughout use garxam hami
 
 
+//here, we tell node : maa ejs use gardai xu, k k chhiney ho sabai set gar hai vaneko.
+app.set("view engine", "ejs")
 
 // app.get('/', (req, res)=> {
 //     res.send("hello world");
@@ -14,6 +16,9 @@ app.get('/about', (req, res)=> {
 
 //in terminal first run node app.js and in browser localhost:3000/ and enter
 app.get('/', (req, res)=> {
+    res.send("This is homepage.")
+})
+app.get('/request', (req, res)=> {
     console.log(req)
 })
 
